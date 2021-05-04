@@ -1,0 +1,1 @@
+// memasukkan data ke database
