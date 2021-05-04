@@ -1,0 +1,1 @@
+// docker exec -ti <container_name> bin/sh
