@@ -1,0 +1,7 @@
+Referensi : https://dhenandi.web.id/menjalankan-mysql-mariadb-dan-phpmyadmin-secara-mudah-dengan-docker/
+
+- Untuk menjalankan docker compose dan membuat contianer serta mendownload images, menggunakan syntax :
+    docker-compose up -d
+- untuk masuk di mysql cli bisa menggunakan syntax:
+    docker exec -ti mysql mysql -u root -p
+-

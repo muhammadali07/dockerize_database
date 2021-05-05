@@ -1,1 +1,0 @@
-https://dhenandi.web.id/menjalankan-mysql-mariadb-dan-phpmyadmin-secara-mudah-dengan-docker/
