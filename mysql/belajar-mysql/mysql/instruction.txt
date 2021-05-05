@@ -4,4 +4,8 @@ Referensi : https://dhenandi.web.id/menjalankan-mysql-mariadb-dan-phpmyadmin-sec
     docker-compose up -d
 - untuk masuk di mysql cli bisa menggunakan syntax:
     docker exec -ti mysql mysql -u root -p
--
+- jika ada update di docker-compose.yml, bisa menggunakan syntx:
+    1. docker-compose down
+    2. docker system prune -a
+    3. docker-compose up -d
+

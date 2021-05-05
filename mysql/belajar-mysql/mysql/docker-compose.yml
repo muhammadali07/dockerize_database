@@ -1,5 +1,18 @@
-version: "2"
+version: "3.8"
 services:
+    apache:
+      container_name: apache
+      image: 'bitnami/apache:latest'
+      ports:
+        - '80:8080'
+        - '443:8443'
+      volumes:
+        - /path/to/app:/app 
+      links: 
+        - db:db
+        - phpmyadmin:phpmyadmin
+      networks: 
+        - db_network
     db:
         container_name: mysql
         hostname: mysql
@@ -7,15 +20,16 @@ services:
         ports:
           - "3306:3306"
         environment:
-          MYSQL_DATABASE: testDB
-          MYSQL_USER: dhenandi
-          MYSQL_PASSWORD: secret
-          MYSQL_ROOT_PASSWORD: secret
+          MYSQL_DATABASE: mabDB
+          MYSQL_USER: mab
+          MYSQL_PASSWORD: mab07
+          MYSQL_ROOT_PASSWORD: mab07
         volumes:
           - persistent:/var/lib/mysql
           - ./files:/files
         networks:
-          - default
+          - db_network
+
     phpmyadmin:
         container_name: phpmyadmin
         image: phpmyadmin/phpmyadmin
@@ -25,8 +39,14 @@ services:
         ports:
           - 8000:80
         environment:
-          MYSQL_USER: dhenandi
-          MYSQL_PASSWORD: secret
-          MYSQL_ROOT_PASSWORD: secret
+          MYSQL_USER: mab
+          MYSQL_PASSWORD: mab07
+          MYSQL_ROOT_PASSWORD: mab07
+        networks: 
+          - db_network
 volumes:
     persistent:
+
+networks: 
+  db_network:
+    name: db_network
