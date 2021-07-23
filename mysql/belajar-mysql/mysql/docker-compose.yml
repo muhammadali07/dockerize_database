@@ -4,7 +4,7 @@ services:
       container_name: apache
       image: 'bitnami/apache:latest'
       ports:
-        - '80:8080'
+        - '8000:80'
         - '443:8443'
       volumes:
         - /path/to/app:/app 
