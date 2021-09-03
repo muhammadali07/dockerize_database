@@ -1,0 +1,3 @@
+show table = \d
+desc table = \d <table name>
+drop table = drop table <table name>
