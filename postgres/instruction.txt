@@ -5,6 +5,6 @@ https://towardsdatascience.com/how-to-run-postgresql-and-pgadmin-using-docker-3a
 
 1. Running docker-compose : Docker-compose -f docker-compose.yml up -d or docker-compose up
 2. Go to Bash of database : docker exec -ti <container_name> Bash
-3. Go to yout database : psql --host=<name of service your db> --username=<user of db> --dbname=<your db>
+3. Go to yout database : psql --host=<name of service your db in docker-compose.yml> --username=<user of db> --dbname=<your db>
 4. you can check your configuration for your username, password, dbname in database.env file.
 5. and execute your db
