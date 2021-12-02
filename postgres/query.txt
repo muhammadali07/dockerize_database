@@ -7,4 +7,4 @@ select table with condition = select * from {table name} where {coloumn paramete
 example : select nilai_parameter_tanggal from public.parameterglobal where kode_parameter='POD';
           select * from public.parameterglobal where kode_parameter='POD';
           
-clear screen/commang line = \! clear
+clear screen/command line = \! clear
