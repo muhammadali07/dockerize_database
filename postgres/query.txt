@@ -3,3 +3,6 @@ desc table = \d <table name>
 drop table = drop table <table name>
 alter table = alter table <table name> alter coloumn type <data type>(lenght of data)
 select table = select * from <table name> / same as mysql query
+select table with condition = select * from {table name} where {coloumn parameter condition} = '{value}'
+example : select nilai_parameter_tanggal from public.parameterglobal where kode_parameter='POD';
+          select * from public.parameterglobal where kode_parameter='POD';
