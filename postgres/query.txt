@@ -2,3 +2,4 @@ show table = \d
 desc table = \d <table name>
 drop table = drop table <table name>
 alter table = alter table <table name> alter coloumn type <data type>(lenght of data)
+select table = select * from <table name> / same as mysql query
